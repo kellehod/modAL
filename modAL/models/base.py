@@ -328,7 +328,7 @@ class BaseCommittee(ABC, BaseEstimator):
                 "The selected query strategy doesn't support return_metrics")
             return query_result, retrieve_rows(X_pool, query_result), query_metrics
         else:
-            return query_result, retrieve_rows(X_pool, query_result)
+            return query_result, query_metrics
 
     def rebag(self, **fit_kwargs) -> None:
         """
